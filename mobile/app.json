@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Roseberry",
+    "slug": "roseberry",
+    "scheme": "roseberry",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "extra": {
+      "eas": {
+        "projectId": "00000000-0000-0000-0000-000000000000"
+      }
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "dev.roseberry.app"
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
+
+
