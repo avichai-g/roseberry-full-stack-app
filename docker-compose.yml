@@ -37,6 +37,19 @@ services:
         condition: service_healthy
     command: sh -c "npx prisma migrate deploy && node dist/scripts/seed.js && node dist/index.js"
 
+  mobile:
+    build:
+      context: ./mobile
+      dockerfile: Dockerfile
+    container_name: roseberry-mobile
+    ports:
+      - "8081:8081"
+    depends_on:
+      backend:
+        condition: service_started
+    environment:
+      EXPO_DEVTOOLS_LISTEN_ADDRESS: 0.0.0.0
+
 volumes:
   db_data:
 
